@@ -1,0 +1,111 @@
+---
+title: "Code-Through: Creating a Data Sciences Professional Profile on GitHub"
+author: "Ricky Duran"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+    toc: yes
+---
+
+# Introduciton
+
+An important part of transitioning to a career in data sciences is to market yourself, and your abilities. This helps to, not only tell potential employers about your skillsets, but to showcase them. You could also link your previous projects to your website and begin compiling a portfilio, as well. For this code-through I will be creating a profession website and CV, and get you on your way to developing a profesisonal profile of your own!
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set( echo = TRUE, message=F, warning=F, fig.width = 10, fig.height = 10)
+library("jpeg")
+library("png")
+```
+
+# Website Development
+
+Since this project will exist on muntiple platforms, only a portion will be coded here. A large portion of the coding will take place on github, for the creation of your website.
+
+## Step 1: created an account on GitHub
+
+If you haven't done so already you can created an account on [GitHub](https://github.com/), which will be important to this project as well as helping you to develop a network within the Data Sciences/Programming communities. This will also be where your website will live. If you sign up with username JaneDoe then your website will be https://JaneDoe.github.io.
+
+## Step 2: Choose a Website Template
+
+There are an array of website templates around GitHub, aiming to provide you with a basic foundations for various estetic outputs.
+
+For this example we will be using the beautiful-jekyll website template:
+
+[Beautiful Jekyll Website Template](https://deanattali.com/beautiful-jekyll/)
+
+## Step 3: Fork the Repository
+
+From the [Theme Project Page](https://github.com/daattali/beautiful-jekyll#readme) Fork the repository by clicking the Fork button on the top right corner. Forking means that you now copied this whole project and all the files into your account.
+
+```{r, echo=FALSE}
+pp <- readPNG("fork.png")
+plot.new() 
+rasterImage(pp, 0,0,1,1)
+```
+
+## Step 4: Rename the Repository
+
+Rename the repository to `<yourusername>.github.io`.This will create a GitHub User page ready with the Beautiful Jekyll template that will be available at https://<yourusername>.github.io. To do this, click on Settings at the top (the cog icon) and there you'll have an option to rename.
+
+```{r, echo=FALSE}
+pp <- readPNG("rename.png")
+plot.new() 
+rasterImage(pp, 0,0,1,1)
+```
+
+
+**Pro Tip**
+
+If you have purchased a Custom URL, you can use it on your website. You can find directions to do so, [here](https://medium.com/@hossainkhan/using-custom-domain-for-github-pages-86b303d3918a)
+
+## Step 5: Customize your Website Settings
+
+Edit the `_config.yml` file to change all the settings to reflect your site. 
+
+To edit the file, click on it and then click on the pencil icon. The file settings are fairly self-explanatory and the creater added comments inside the file to help you further. Any line that begins with a pound sign (#) is a comment, and the rest of the lines are actual settings.
+
+```{r, echo=FALSE}
+pp <- readPNG("edit.png")
+plot.new() 
+rasterImage(pp, 0,0,1,1)
+```
+
+After you save your changes to the config file (by clicking on Commit changes), your website should be ready in a minute or two at https://<yourusername>.github.io. Every time you make a change to any file, your website will get rebuilt and should be updated in about a minute or so.
+
+```{r, echo=FALSE}
+pp <- readPNG("commit.png")
+plot.new() 
+rasterImage(pp, 0,0,1,1)
+```
+
+You can now visit your shiny new website, which will be seeded with several sample blog posts and a couple other pages. Your website is at https://<yourusername>.github.io (replace <yourusername> with your user name). Do not add www to the URL - it will not work!
+
+## Setp 6: Add Content to Your Site!
+
+To add pages to your site, you can either write a markdown file (.md) or you can write an HTML file directly. . You can look at some files (.md) inncluded your site folder to get an idea of how to write markdown. To look at existing files, click on any file that ends in .md, for example aboutme.md. On the next page you can see some nicely formatted text (there is a word in bold, a link, bullet points), and if you click on the pencil icon to edit the file, you will see the markdown that generated the pretty text. Very easy!
+
+In contrast, look at the index.html to see how to write HTML.
+
+Any file that you add inside the _posts directory will be treated as a blog entry. You can look at the existing files there to get an idea of how to write blog posts. After you successfully add your own post, you can delete the existing files inside _posts to remove the sample posts, as those are just demo posts to help you learn.
+
+Finally, you can add tabs, and even links to external pages, by going back into the configure page and adding htem there.
+
+For my Website, I added the follwing pages:
+- About Me
+- Qualifications (Links to the CV portion I am now going to walk through)
+- Publicaiton
+
+```{r, echo=FALSE}
+pp <- readPNG("addtabs.png")
+plot.new() 
+rasterImage(pp, 0,0,1,1)
+```
+
+My site is still a work in progress, but you can see where it currently stands at: https://rickyduran.github.io/
+
+------
+Code-Through by:
+Ricky Duran
+ricky.duran@asu.edu
